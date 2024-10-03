@@ -44,3 +44,11 @@ def test_price(pr_1):
 
     pr_1.price = 100000.0
     assert pr_1.price == 100000.0
+
+
+def test_str(pr_1):
+    assert str(pr_1) == "телефон, 12000.0 руб. Остаток: 1 шт."
+
+
+def test_add(pr_1, pr_2):
+    assert pr_1 + pr_2 == 22000.0

@@ -38,3 +38,5 @@ if __name__ == "__main__":
     print(new_product.price)
     new_product.price = 0
     print(new_product.price)
+
+    print(product1 + product2)
