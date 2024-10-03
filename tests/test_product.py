@@ -25,3 +25,22 @@ def test_init(pr_1, pr_2):
 
     assert pr_1.quantity == 1
     assert pr_2.quantity == 10
+
+
+def test_new_product():
+    assert Product.new_product(
+        {
+            "name": "Samsung Galaxy S23 Ultra",
+            "description": "256GB, Серый цвет, 200MP камера",
+            "price": 180000.0,
+            "quantity": 5,
+        }
+    )
+
+
+def test_price(pr_1):
+    pr_1.price = 0.0
+    assert "Цена не должна быть нулевая или отрицательная"
+
+    pr_1.price = 100000.0
+    assert pr_1.price == 100000.0
