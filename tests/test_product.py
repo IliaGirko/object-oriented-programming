@@ -52,3 +52,8 @@ def test_str(pr_1):
 
 def test_add(pr_1, pr_2):
     assert pr_1 + pr_2 == 22000.0
+
+
+def test_add_error(pr_1):
+    with pytest.raises(TypeError):
+        pr_1 + 1
