@@ -13,6 +13,6 @@ poetry install
 ```
 3. Запустить программу из файла `main.py`
 
-### Code coverage достигает 92%
+### Code coverage достигает 94%
 
 ### Проект распространяеется под [лицензией MIT](https://github.com/git/git-scm.com/blob/main/MIT-LICENSE.txt)
