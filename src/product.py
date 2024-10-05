@@ -14,8 +14,11 @@ class Product:
         return f"{self.name}, {self.__price} руб. Остаток: {self.quantity} шт."
 
     def __add__(self, other):
-        result = self.__price * self.quantity + other.__price * other.quantity
-        return result
+        if type(other) is self.__class__:
+            result = self.__price * self.quantity + other.__price * other.quantity
+            return result
+        else:
+            raise TypeError
 
     @classmethod
     def new_product(cls, new_product_dict: dict):
@@ -38,3 +41,8 @@ class Product:
                 self.__price = new_price
         else:
             print("Цена не должна быть нулевая или отрицательная")
+
+
+# pr_1 = Product("Samsung Galaxy S23 Ultra", "256GB, Серый цвет, 200MP камера", 180000.0, 5)
+#
+# print(pr_1 + pr_1)

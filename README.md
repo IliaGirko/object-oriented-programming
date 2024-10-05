@@ -1,6 +1,8 @@
 # object-oriented-programming
 
 ## В программе созданно два класса(`Category` и `Product`) в файле `main.py` можно запустить программу и посмотреть работоспособность.
+### У класса `Product` реализованы два класса наследника `Smartphone` и `LawnGrass`.
+
 
 ### Для запуска программы:
 1. Сделать клон репозитория с GitHub:
@@ -13,6 +15,7 @@ poetry install
 ```
 3. Запустить программу из файла `main.py`
 
-### Code coverage достигает 94%
+
+### Code coverage достигает 96%
 
 ### Проект распространяеется под [лицензией MIT](https://github.com/git/git-scm.com/blob/main/MIT-LICENSE.txt)
