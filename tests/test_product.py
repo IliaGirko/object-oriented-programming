@@ -13,6 +13,11 @@ def pr_2():
     return Product("телевизор", "ЖК", 1000.0, 10)
 
 
+@pytest.fixture()
+def pr_3():
+    return Product("телевизор", "ЖК", 1000.0, 0)
+
+
 def test_init(pr_1, pr_2):
     assert pr_1.name == "телефон"
     assert pr_2.name == "телевизор"
@@ -57,3 +62,10 @@ def test_add(pr_1, pr_2):
 def test_add_error(pr_1):
     with pytest.raises(TypeError):
         pr_1 + 1
+
+
+def test_quantity_zero():
+    try:
+        Product("телевизор", "ЖК", 1000.0, 0)
+    except ValueError:
+        assert "Товар с нулевым количеством не может быть добавлен"
